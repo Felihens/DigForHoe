@@ -23,6 +23,8 @@ The hoe can level and raise the ground, but to dig you have to switch to the pic
 
 **r2modman / Thunderstore Mod Manager:** click *Install*. To install a downloaded zip, go to Settings → *Import local mod*.
 
+**Nexus Mods / Vortex:** also on [Nexus Mods](https://www.nexusmods.com/valheim/mods/4899).
+
 **Manual:**
 1. Extract the zip.
 2. Copy the `plugins/DigForHoe` folder into `Valheim/BepInEx/plugins/`.
@@ -59,6 +61,8 @@ A enxada nivela e levanta o chão, mas para cavar você precisa trocar para a pi
 ### Instalação
 
 **r2modman / Thunderstore Mod Manager:** clique em *Install*. Para instalar um zip baixado, use Configurações → *Import local mod*.
+
+**Nexus Mods / Vortex:** também está no [Nexus Mods](https://www.nexusmods.com/valheim/mods/4899).
 
 **À mão:**
 1. Extraia o zip.
