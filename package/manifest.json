@@ -1,6 +1,6 @@
 {
   "name": "DigForHoe",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "website_url": "https://github.com/Felihens/DigForHoe",
   "description": "Adds a Dig option to the hoe: lower the ground exactly like a pickaxe hit, wherever you aim. Other players don't need the mod.",
   "dependencies": [

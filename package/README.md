@@ -12,6 +12,7 @@ The hoe can level and raise the ground, but to dig you have to switch to the pic
 
 - **Same dig as the pickaxe:** same depth, same size, same rules as a pickaxe hit on the ground. Hit the same spot again to dig deeper.
 - **No cost:** Dig needs no materials, like digging with a pickaxe.
+- **No workbench needed:** dig anywhere, far from any workbench, like with a pickaxe.
 - **Other players don't need the mod.** Terrain changes are shared over the network by name, and Dig sends the name of the pickaxe's own dig. Whoever handles that patch of ground applies a normal pickaxe dig, with or without this mod.
 - Wards and no-build areas work as usual.
 
@@ -51,6 +52,7 @@ A enxada nivela e levanta o chão, mas para cavar você precisa trocar para a pi
 
 - **A mesma escavação da picareta:** mesma profundidade, mesmo tamanho e mesmas regras de um golpe de picareta no chão. Use de novo no mesmo ponto para cavar mais fundo.
 - **Sem custo:** o Dig não precisa de materiais, assim como cavar com a picareta.
+- **Sem bancada:** cave em qualquer lugar, longe de qualquer bancada, assim como com a picareta.
 - **Os outros jogadores não precisam do mod.** As mudanças no terreno são enviadas pela rede pelo nome, e o Dig envia o nome da escavação da própria picareta. Quem cuida daquele pedaço de chão aplica uma escavação normal de picareta, com ou sem este mod.
 - Áreas de proteção (wards) e áreas onde não se pode construir funcionam como no jogo normal.
 

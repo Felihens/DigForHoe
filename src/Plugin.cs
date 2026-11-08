@@ -12,7 +12,7 @@ namespace DigForHoe
     {
         public const string GUID = "felih.DigForHoe";
         public const string NAME = "DigForHoe";
-        public const string VERSION = "1.0.0";
+        public const string VERSION = "1.0.1";
 
         internal static ManualLogSource Log;
         internal static ConfigEntry<bool> DetailedLog;
@@ -89,6 +89,10 @@ namespace DigForHoe
                 piece.m_name = "Dig";
                 piece.m_description = "Lowers the ground like a pickaxe hit, where you aim.";
                 piece.m_resources = new Piece.Requirement[0];
+                // Raise ground needs a workbench nearby; digging with a pickaxe doesn't, so Dig doesn't either.
+                if (piece.m_craftingStation != null)
+                    Plugin.Debug("[setup] dig no longer needs " + piece.m_craftingStation.m_name + " nearby");
+                piece.m_craftingStation = null;
                 Sprite icon = pick.GetComponent<ItemDrop>().m_itemData.GetIcon();
                 if (icon != null) piece.m_icon = icon;
 
