@@ -15,6 +15,7 @@ The hoe can level and raise the ground, but to dig you have to switch to the pic
 - **No workbench needed:** dig anywhere, far from any workbench, like with a pickaxe.
 - **Other players don't need the mod.** Terrain changes are shared over the network by name, and Dig sends the name of the pickaxe's own dig. Whoever handles that patch of ground applies a normal pickaxe dig, with or without this mod.
 - Wards and no-build areas work as usual.
+- **Level ground that really levels.** The game levels to the height of the spot you click, so on uneven ground each stroke ends at a different height. Here every stroke keeps one height: that of the **level ground right beside it**, else of your last stroke nearby, else of your feet. Hold **Shift** (alternative place) to start a new flat at your feet. The preview shows at that height and a label under the crosshair says how much it raises or digs (`Level +0.4 m`). A stroke that would raise or dig more than 2 m anywhere under it is refused. The game's edge smoothing is kept, so the flat still blends into the ground around it. This also works for other players without the mod: the stroke is sent with its height.
 
 ### Requirements
 
@@ -36,7 +37,11 @@ To update, delete the old `DigForHoe` folder before copying the new one.
 
 ### Configuration
 
-`BepInEx/config/felih.DigForHoe.cfg` only has `DetailedLog` (off), which writes details to the BepInEx log for bug reports.
+`BepInEx/config/felih.DigForHoe.cfg`:
+
+- `SmartLevel` (on): the level ground above. Off = the game's own levelling.
+- `MaxChange` (2 m): how much a level stroke may raise or dig at most.
+- `DetailedLog` (off): writes details to the BepInEx log for bug reports.
 
 ### Notes
 
@@ -55,6 +60,7 @@ A enxada nivela e levanta o chão, mas para cavar você precisa trocar para a pi
 - **Sem bancada:** cave em qualquer lugar, longe de qualquer bancada, assim como com a picareta.
 - **Os outros jogadores não precisam do mod.** As mudanças no terreno são enviadas pela rede pelo nome, e o Dig envia o nome da escavação da própria picareta. Quem cuida daquele pedaço de chão aplica uma escavação normal de picareta, com ou sem este mod.
 - Áreas de proteção (wards) e áreas onde não se pode construir funcionam como no jogo normal.
+- **Nivelar que nivela de verdade.** O jogo nivela pela altura do ponto em que você clica, então em terreno irregular cada golpe termina numa altura diferente. Aqui todo golpe mantém uma altura só: a do **chão já nivelado ao lado**, senão a do seu último golpe por perto, senão a dos seus pés. Segure **Shift** (posicionamento alternativo) para começar um plano novo na altura dos seus pés. A prévia aparece nessa altura e um texto abaixo da mira diz quanto ele sobe ou cava (`Level +0.4 m`). Um golpe que precisaria subir ou cavar mais de 2 m em algum ponto é recusado. A suavização das bordas do jogo continua, então o plano ainda se junta ao chão em volta. Funciona também para outros jogadores sem o mod: o golpe vai com a altura.
 
 ### Requisitos
 
@@ -76,7 +82,11 @@ Para atualizar, apague a pasta `DigForHoe` antiga antes de copiar a nova.
 
 ### Configuração
 
-`BepInEx/config/felih.DigForHoe.cfg` só tem `DetailedLog` (desligado), que escreve detalhes no log do BepInEx para relatar bugs.
+`BepInEx/config/felih.DigForHoe.cfg`:
+
+- `SmartLevel` (ligado): o nivelamento acima. Desligado = o nivelamento do próprio jogo.
+- `MaxChange` (2 m): quanto um golpe de nivelar pode subir ou cavar no máximo.
+- `DetailedLog` (desligado): escreve detalhes no log do BepInEx para relatar bugs.
 
 ### Observações
 

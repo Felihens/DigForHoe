@@ -12,18 +12,23 @@ namespace DigForHoe
     {
         public const string GUID = "felih.DigForHoe";
         public const string NAME = "DigForHoe";
-        public const string VERSION = "1.0.1";
+        public const string VERSION = "1.1.0";
 
         internal static ManualLogSource Log;
-        internal static ConfigEntry<bool> DetailedLog;
+        internal static ConfigEntry<bool> DetailedLog, SmartLevel;
+        internal static ConfigEntry<float> MaxChange;
 
         private void Awake()
         {
             Log = Logger;
+            SmartLevel = Config.Bind("1 - Level ground", "SmartLevel", true, "The hoe's level ground keeps one height: that of the level ground right beside the stroke, else of your last stroke nearby, else of your feet. Holding the alternative place key (Shift) always uses your feet, to start a new flat. Off = the game's own levelling.");
+            MaxChange = Config.Bind("1 - Level ground", "MaxChange", 2f, new ConfigDescription("A stroke that would raise or dig the ground more than this many metres anywhere under it is refused.", new AcceptableValueRange<float>(0.5f, 8f)));
             DetailedLog = Config.Bind("9 - Debug", "DetailedLog", false, "Writes details to the BepInEx log.");
             new Harmony(GUID).PatchAll(typeof(Plugin).Assembly);
             Log.LogInfo(NAME + " " + VERSION + " loaded");
         }
+
+        private void OnGUI() { Level.OnGUI(); }
 
         internal static void Debug(string msg)
         {
